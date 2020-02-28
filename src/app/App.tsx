@@ -3,7 +3,8 @@ import { hot } from 'react-hot-loader/root'
 import { Switch, Route, Link } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
-import Example1 from '../features/tasks/example1/Example1'
+import Tasks0 from '../features/tasks/example0/Example0'
+import Tasks1 from '../features/tasks/example1/Example1'
 import Tasks2 from '../features/tasks/example2/Example2'
 import Tasks3 from '../features/tasks/example3/Example3'
 import Tasks4 from '../features/tasks/example4/Example4'
@@ -14,8 +15,11 @@ import store from '../features/tasks/example5/configureStore'
 const App: React.FC = () => {
   return (
     <Switch>
+      <Route path="/example0">
+        <Tasks0 />
+      </Route>
       <Route path="/example1">
-        <Example1 />
+        <Tasks1 />
       </Route>
       <Route path="/example2">
         <Tasks2 />
